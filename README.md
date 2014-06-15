@@ -1,4 +1,4 @@
-# [jQuery PrintSplitter] 
+# jQuery PrintSplitter
 
 A jQuery plugin for neatly splitting tables / other content across pages when printing
 
@@ -6,7 +6,7 @@ A jQuery plugin for neatly splitting tables / other content across pages when pr
 
 The print splitter can optionally take values for different sized pages and margins. Defaults to A4.
 
-'''
+```
 $(target-element).printSplitter({
 	paperSize: {
 		width: 11.692 // Width in inches, defaults A4
@@ -23,5 +23,4 @@ $(target-element).printSplitter({
 	headerElements: [], // Array of extra elements to include in the calculations on the first page of printing. Useful for table key / headings etc
 	callback: function() {} // A callback to run when the print dialog is closed
 });
-
-'''
+```
