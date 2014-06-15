@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head></head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="PrintSplitter.js"></script>
+<script>
+	function printWithSplit() {
+		var isPortrait = $('input[name="orientation"]:checked').val() == 'portrait';
+		$('#printsplit').printSplit({
+			headerElements: ['.headerContent'],
+			portraitMode: isPortrait
+		});
+	}
+</script>
+<style>
+table tr td {
+	height:150px;
+	width:150px;
+	background:#ccc;
+	border:1px solid #000;
+	text-align:center;
+}
+ul li {
+	height:70px;
+	width:300px;
+	border:1px solid #000;
+}
+</style>
+<body>
+
+<div class="headerContent">
+	<h1>Print splitter demonstration</h1>
+	<p>Choose an orientation then click the print button. Make sure the system printer options match your selection.</p>
+	<p>
+		<label><input type="radio" value="landscape" name="orientation" checked="checked">Landscape (Default)</label>
+		<label><input type="radio" value="portrait" name="orientation">Portrait</label>
+	</p>
+	<p><input type="button" onclick="printWithSplit();" value="Print page"></p>
+</div>
+<table id="printsplit">
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+	<tr>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+		<td>Test</td>
+	</tr>
+</table>
+
+</body>
+</html>
