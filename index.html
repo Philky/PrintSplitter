@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
-<head></head>
+<head>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="PrintSplitter.js"></script>
 <script>
 	function printWithSplit() {
 		var isPortrait = $('input[name="orientation"]:checked').val() == 'portrait';
-		$('#printsplit').printSplit({
+		$('#printsplit').printSplitter({
 			headerElements: ['.headerContent'],
 			portraitMode: isPortrait
 		});
@@ -26,6 +26,8 @@ ul li {
 	border:1px solid #000;
 }
 </style>
+
+</head>
 <body>
 
 <div class="headerContent">

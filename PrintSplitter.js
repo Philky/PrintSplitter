@@ -1,15 +1,40 @@
+/*
+jQuery Print Splitter
+Version 1.0
+Created by Phil Combridge (Philky)
+Copyright (c) 2014 Phil Combridge
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+ */
+
 (function ($) {
 
-	$.fn.printSplit = function(options) {
+	$.fn.printSplitter = function(options) {
 		var self = this;
 
 		// Gets dpi of current screen
-		var getDpi = function() {
+		var dpi = (function() {
 			$('body').append('<div id="printSplitDPI" style="width:1in;height:1in;left:-100%;position:absolute;top:-100%;"></div>');
 			var dpi = document.getElementById('printSplitDPI').offsetHeight;
 			$('#printSplitDPI').remove();
 			return dpi;
-		};
+		})();
 
 		// Initialise passed in variables
 		options = $.extend({
@@ -19,7 +44,6 @@
 			},
 			threshold: 30,
 			portraitMode: false,
-			dpi: getDpi(),
 			margins: {
 				top: 0.39,
 				left: 0.39,
@@ -32,7 +56,7 @@
 
 		// Setup calculation height based on page orientation & margins
 		var preHeight = (options.portraitMode) ? options.paperSize.width : options.paperSize.height;
-		var pageHeight = (preHeight - options.margins.bottom - options.margins.top) * options.dpi;
+		var pageHeight = (preHeight - options.margins.bottom - options.margins.top) * dpi;
 
 		// Get the elements for splitting
 		var iterElements;
