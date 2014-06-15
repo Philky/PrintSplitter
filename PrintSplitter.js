@@ -1,6 +1,6 @@
 /*
 jQuery Print Splitter
-Version 1.0
+Version 1.0.1
 Created by Phil Combridge (Philky)
 Copyright (c) 2014 Phil Combridge
 
