@@ -9,8 +9,8 @@ The print splitter can optionally take values for different sized pages and marg
 ```
 $(target-element).printSplitter({
 	paperSize: {
-		width: 11.692 // Width in inches, defaults A4
-		height: 8.267 // Height in inches, defaults A4
+		width: 11.692, // Width in inches, defaults A4
+		height: 8.267, // Height in inches, defaults A4
 	},
 	margins: { // All in inches
 		top: 0.39,
